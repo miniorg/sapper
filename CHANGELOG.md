@@ -1,5 +1,333 @@
 # sapper changelog
 
+## 0.25.0
+
+* Force refresh on `goto(current_url)` ([#484](https://github.com/sveltejs/sapper/pull/484))
+* Fix preloading navigation bug ([#532](https://github.com/sveltejs/sapper/issues/532))
+* Don't mutate opts.headers ([#528](https://github.com/sveltejs/sapper/issues/528))
+* Don't crawl hundreds of pages simultaneously ([#369](https://github.com/sveltejs/sapper/pull/369))
+
+## 0.24.3
+
+* Add service-worker-index.html shell file for offline support ([#422](https://github.com/sveltejs/sapper/issues/422))
+* Don't cache .map files ([#534](https://github.com/sveltejs/sapper/issues/534))
+
+## 0.24.2
+
+* Support Rollup 1.0 ([#541](https://github.com/sveltejs/sapper/pull/541))
+
+## 0.24.1
+
+* Include CSS chunks in webpack build info to avoid duplication ([#529](https://github.com/sveltejs/sapper/pull/529))
+* Fix preload `as` for styles ([#530](https://github.com/sveltejs/sapper/pull/530))
+
+## 0.24.0
+
+* Handle external URLs in `this.redirect` ([#490](https://github.com/sveltejs/sapper/issues/490))
+* Strip leading `/` from basepath ([#495](https://github.com/sveltejs/sapper/issues/495))
+* Treat duplicate query string parameters as arrays ([#497](https://github.com/sveltejs/sapper/issues/497))
+* Don't buffer `stdout` and `stderr` ([#305](https://github.com/sveltejs/sapper/issues/305))
+* Posixify `build_dir` ([#498](https://github.com/sveltejs/sapper/pull/498))
+* Use `page[XY]Offset` instead of `scroll[XY]` ([#480](https://github.com/sveltejs/sapper/issues/480))
+
+## 0.23.5
+
+* Include lazily-imported CSS in main CSS chunk ([#492](https://github.com/sveltejs/sapper/pull/492))
+* Make search param decoding spec-compliant ([#493](https://github.com/sveltejs/sapper/pull/493))
+* Handle async route errors ([#488](https://github.com/sveltejs/sapper/pull/488))
+
+## 0.23.4
+
+* Ignore empty anchors when exporting ([#491](https://github.com/sveltejs/sapper/pull/491))
+
+## 0.23.3
+
+* Clear `error` and `status` on successful render ([#477](https://github.com/sveltejs/sapper/pull/477))
+
+## 0.23.2
+
+* Fix entry point CSS ([#471](https://github.com/sveltejs/sapper/pull/471))
+
+## 0.23.1
+
+* Scroll to deeplink that matches current URL ([#472](https://github.com/sveltejs/sapper/pull/472))
+* Scroll to deeplink on another page ([#341](https://github.com/sveltejs/sapper/issues/341))
+
+## 0.23.0
+
+* Overhaul internal APIs ([#468](https://github.com/sveltejs/sapper/pull/468))
+* Remove unused `sapper start` and `sapper upgrade` ([#468](https://github.com/sveltejs/sapper/pull/468))
+* Remove magic environment variables ([#469](https://github.com/sveltejs/sapper/pull/469))
+* Preserve SSI comments ([#470](https://github.com/sveltejs/sapper/pull/470))
+
+## 0.22.10
+
+* Handle `sapper-noscroll` attribute on `<a>` elements ([#376](https://github.com/sveltejs/sapper/issues/376))
+* Fix CSS paths when using a base path ([#466](https://github.com/sveltejs/sapper/pull/466))
+
+## 0.22.9
+
+* Fix legacy builds ([#462](https://github.com/sveltejs/sapper/pull/462))
+
+## 0.22.8
+
+* Ensure CSS placeholders are overwritten ([#462](https://github.com/sveltejs/sapper/pull/462))
+
+## 0.22.7
+
+* Fix cookies ([#460](https://github.com/sveltejs/sapper/pull/460))
+
+## 0.22.6
+
+* Normalise chunk filenames on Windows ([#456](https://github.com/sveltejs/sapper/pull/456))
+* Load modules with credentials ([#458](https://github.com/sveltejs/sapper/pull/458))
+
+## 0.22.5
+
+* Fix `sapper dev`. Oops.
+
+## 0.22.4
+
+* Ensure launcher does not overwrite a module ([#455](https://github.com/sveltejs/sapper/pull/455))
+
+## 0.22.3
+
+* Prevent server from accidentally importing dev client
+
+## 0.22.2
+
+* Make paths in generated code relative to project
+
+## 0.22.1
+
+* Fix `pkg.files`
+
+## 0.22.0
+
+* Move generated files into `__sapper__` ([#453](https://github.com/sveltejs/sapper/pull/453))
+* Change default build and export directories to `__sapper__/build` and `__sapper__/export` ([#453](https://github.com/sveltejs/sapper/pull/453))
+
+## 0.21.1
+
+* Read template from build directory in production
+
+## 0.21.0
+
+* Change project folder structure ([#432](https://github.com/sveltejs/sapper/issues/432))
+* Escape filenames ([#446](https://github.com/sveltejs/sapper/pull/446/))
+
+## 0.20.4
+
+* Fix legacy build CSS ([#439](https://github.com/sveltejs/sapper/issues/439))
+* Enable debugging in Chrome and VSCode ([#435](https://github.com/sveltejs/sapper/issues/435))
+
+## 0.20.3
+
+* Inject `nonce` attribute if `res.locals.nonce` is present ([#424](https://github.com/sveltejs/sapper/pull/424))
+* Prevent service worker caching ([#428](https://github.com/sveltejs/sapper/pull/428))
+* Consistent caching for HTML responses ([#429](https://github.com/sveltejs/sapper/pull/429))
+
+## 0.20.2
+
+* Add `immutable` cache control header for hashed assets ([#425](https://github.com/sveltejs/sapper/pull/425))
+* Handle value-less query string params ([#426](https://github.com/sveltejs/sapper/issues/426))
+
+## 0.20.1
+
+* Update shimport
+
+## 0.20.0
+
+* Decode `req.params` and `req.query` ([#417](https://github.com/sveltejs/sapper/issues/417))
+* Decode URLs before writing files in `sapper export` ([#414](https://github.com/sveltejs/sapper/pull/414))
+* Generate server sourcemaps for Rollup apps in dev mode ([#418](https://github.com/sveltejs/sapper/pull/418))
+
+## 0.19.3
+
+* Better unicode route handling ([#347](https://github.com/sveltejs/sapper/issues/347))
+
+## 0.19.2
+
+* Ignore editor tmp files ([#220](https://github.com/sveltejs/sapper/issues/220))
+* Ignore clicks an `<a>` element without `href` ([#235](https://github.com/sveltejs/sapper/issues/235))
+* Allow routes that are reserved JavaScript words ([#315](https://github.com/sveltejs/sapper/issues/315))
+* Print out webpack errors ([#403](https://github.com/sveltejs/sapper/issues/403))
+
+## 0.19.1
+
+* Don't include local origin in export redirects ([#409](https://github.com/sveltejs/sapper/pull/409))
+
+## 0.19.0
+
+* Extract styles out of JS into .css files, for Rollup apps ([#388](https://github.com/sveltejs/sapper/issues/388))
+* Fix `prefetchRoutes` ([#380](https://github.com/sveltejs/sapper/issues/380))
+
+## 0.18.7
+
+* Support differential bundling for Rollup apps via a `--legacy` flag ([#280](https://github.com/sveltejs/sapper/issues/280))
+
+## 0.18.6
+
+* Bundle missing dependency
+
+## 0.18.5
+
+* Bugfix
+
+## 0.18.4
+
+* Handle non-Sapper responses when exporting ([#382](https://github.com/sveltejs/sapper/issues/392))
+* Add `--dev-port` flag to `sapper dev` ([#381](https://github.com/sveltejs/sapper/issues/381))
+
+## 0.18.3
+
+* Fix service worker Rollup build config
+
+## 0.18.2
+
+* Update `pkg.files`
+
+## 0.18.1
+
+* Add live reloading ([#385](https://github.com/sveltejs/sapper/issues/385))
+
+## 0.18.0
+
+* Rollup support ([#379](https://github.com/sveltejs/sapper/pull/379))
+* Fail `export` if a page times out (configurable with `--timeout`) ([#378](https://github.com/sveltejs/sapper/pull/378))
+
+## 0.17.1
+
+* Print which file is causing build errors/warnings ([#371](https://github.com/sveltejs/sapper/pull/371))
+
+## 0.17.0
+
+* Use `cheap-watch` instead of `chokidar` ([#364](https://github.com/sveltejs/sapper/issues/364))
+
+## 0.16.1
+
+* Fix file watching regression in previous version
+
+## 0.16.0
+
+* Slim down installed package ([#363](https://github.com/sveltejs/sapper/pull/363))
+
+## 0.15.8
+
+* Only set `preloading: true` on navigation, not prefetch ([#352](https://github.com/sveltejs/sapper/issues/352))
+* Provide fallback for missing preload errors ([#361](https://github.com/sveltejs/sapper/pull/361))
+
+## 0.15.7
+
+* Strip leading slash from redirects ([#291](https://github.com/sveltejs/sapper/issues/291))
+* Pass `(req, res)` to store getter ([#344](https://github.com/sveltejs/sapper/issues/344))
+
+## 0.15.6
+
+* Fix exporting with custom basepath ([#342](https://github.com/sveltejs/sapper/pull/342))
+
+## 0.15.5
+
+* Faster `export` with more explanatory output ([#335](https://github.com/sveltejs/sapper/pull/335))
+* Only blur `activeElement` if it exists ([#332](https://github.com/sveltejs/sapper/issues/332))
+* Don't emit `client_info.json` or `server_info.json` ([#318](https://github.com/sveltejs/sapper/issues/318))
+
+## 0.15.4
+
+* Add `ignore` option ([#326](https://github.com/sveltejs/sapper/pull/326))
+
+## 0.15.3
+
+* Crawl pages in parallel when exporting ([#329](https://github.com/sveltejs/sapper/pull/329))
+* Don't minify inline JS when exporting ([#328](https://github.com/sveltejs/sapper/pull/328))
+
+## 0.15.2
+
+* Collapse component chains where no intermediate layout component is specified ([#312](https://github.com/sveltejs/sapper/issues/312))
+
+## 0.15.1
+
+* Prevent confusing error when no root layout is specified
+
+## 0.15.0
+
+* Nested routes (consult [migration guide](https://sapper.svelte.technology/guide#0-14-to-0-15) and docs on [layouts](https://sapper.svelte.technology/guide#layouts)) ([#262](https://github.com/sveltejs/sapper/issues/262))
+
+## 0.14.2
+
+* Prevent unsafe replacements ([#307](https://github.com/sveltejs/sapper/pull/307))
+
+## 0.14.1
+
+* Route parameters can be qualified with regex characters ([#283](https://github.com/sveltejs/sapper/pull/283))
+
+## 0.14.0
+
+* `4xx.html` and `5xx.html` are replaced with `_error.html` ([#209](https://github.com/sveltejs/sapper/issues/209))
+* Treat `foo/index.json.js` and `foo.json.js` as equivalents ([#297](https://github.com/sveltejs/sapper/issues/297))
+* Return a promise from `goto` ([#270](https://github.com/sveltejs/sapper/issues/270))
+* Use store when rendering error pages ([#293](https://github.com/sveltejs/sapper/issues/293))
+* Prevent console errors when visiting an error page ([#279](https://github.com/sveltejs/sapper/issues/279))
+
+## 0.13.6
+
+* Fix `baseUrl` synthesis ([#296](https://github.com/sveltejs/sapper/issues/296))
+
+## 0.13.5
+
+* Fix handling of fatal errors ([#289](https://github.com/sveltejs/sapper/issues/289))
+
+## 0.13.4
+
+* Focus `<body>` after navigation ([#287](https://github.com/sveltejs/sapper/issues/287))
+* Fix timing of hot reload updates
+* Emit `fatal` event if server crashes ([#285](https://github.com/sveltejs/sapper/pull/285))
+* Emit `stdout` and `stderr` events on dev watcher ([#285](https://github.com/sveltejs/sapper/pull/285))
+* Always refresh client assets in dev ([#286](https://github.com/sveltejs/sapper/pull/286))
+* Correctly initialise rebuild stats
+
+## 0.13.3
+
+* Make `fatal` events clonable for IPC purposes
+
+## 0.13.2
+
+* Emit a `basepath` event ([#284](https://github.com/sveltejs/sapper/pull/284))
+
+## 0.13.1
+
+* Reinstate ten-second interval between dev server heartbeats ([#276](https://github.com/sveltejs/sapper/issues/276))
+
+## 0.13.0
+
+* Expose `dev`, `build`, `export` and `find_page` APIs ([#272](https://github.com/sveltejs/sapper/issues/272))
+
+## 0.12.0
+
+* Each app has a single `<App>` component. See the [migration guide](https://sapper.svelte.technology/guide#0-11-to-0-12) for more information ([#157](https://github.com/sveltejs/sapper/issues/157))
+* Process exits with error code 1 if build/export fails ([#208](https://github.com/sveltejs/sapper/issues/208))
+
+## 0.11.1
+
+* Limit routes with leading dots to `.well-known` URIs ([#252](https://github.com/sveltejs/sapper/issues/252))
+* Allow server routes to sit in front of pages ([#236](https://github.com/sveltejs/sapper/pull/236))
+
+## 0.11.0
+
+* Create launcher file ([#240](https://github.com/sveltejs/sapper/issues/240))
+* Only keep necessary parts of webpack stats ([#251](https://github.com/sveltejs/sapper/pull/251))
+* Allow `NODE_ENV` to be overridden when building ([#241](https://github.com/sveltejs/sapper/issues/241))
+
+## 0.10.7
+
+* Allow routes to have a leading `.` ([#243](https://github.com/sveltejs/sapper/pull/243))
+* Only encode necessary characters in routes ([#234](https://github.com/sveltejs/sapper/pull/234))
+* Preserve existing `process.env` when exporting ([#245](https://github.com/sveltejs/sapper/pull/245))
+
+## 0.10.6
+
+* Fix error reporting in `sapper start`
+
 ## 0.10.5
 
 * Fix missing service worker ([#231](https://github.com/sveltejs/sapper/pull/231))
